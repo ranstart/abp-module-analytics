@@ -14,7 +14,7 @@ namespace Ran.Analytics.Visitors
         /// 排行榜
         /// </summary>
         /// <param name="providerName"></param>
-        /// <param name="providerKeys"></param>
+        /// <param name="providerKeys">可不传值</param>
         /// <param name="start"></param>
         /// <param name="end"></param>
         /// <returns></returns>

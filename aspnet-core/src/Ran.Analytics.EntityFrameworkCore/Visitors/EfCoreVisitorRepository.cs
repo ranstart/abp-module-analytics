@@ -30,7 +30,8 @@ namespace Ran.Analytics.Visitors
 
         public async Task<List<VisitorCount>> GetRanking(string providerName, Guid[] providerKeys, DateTime start, DateTime end)
         {
-            return await DbSet.Where(m => m.ProviderName == providerName && providerKeys.Contains(m.ProviderKey) && m.OnTime > start && m.OnTime < end)
+            return await DbSet.Where(m => m.ProviderName == providerName && m.OnTime > start && m.OnTime < end)
+                .WhereIf(providerKeys!=null && providerKeys.Any(), m=> providerKeys.Contains(m.ProviderKey))
                 .GroupBy(m => new { m.ProviderName, m.ProviderKey })
                 .Select(m => new VisitorCount
                 {

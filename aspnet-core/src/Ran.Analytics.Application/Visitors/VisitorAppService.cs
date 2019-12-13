@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Ran.Analytics.Visitors
@@ -37,6 +38,11 @@ namespace Ran.Analytics.Visitors
             {
                 return false;
             }
+        }
+
+        public async Task<List<VisitorCount>> GetRanking(string providerName, Guid[] providerKeys, DateTime start, DateTime end)
+        {
+            return await _visitorRepository.GetRanking(providerName, providerKeys, start, end);
         }
 
         protected virtual string GetClientIpAddress(HttpContext httpContext)

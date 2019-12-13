@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +25,13 @@ namespace Ran.Analytics.Visitors
         public async Task<bool> AddVisitorAsync(string providerName, Guid providerKey)
         {
             return await _visitorAppService.AddVisitorAsync(providerName, providerKey);
+        }
+
+        [HttpGet]
+        [Route("ranking")]
+        public async Task<List<VisitorCount>> GetRanking(string providerName, Guid[] providerKeys, DateTime start, DateTime end)
+        {
+            return await _visitorAppService.GetRanking(providerName, providerKeys,start,end);
         }
     }
 }

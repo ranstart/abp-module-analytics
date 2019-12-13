@@ -1,0 +1,8 @@
+{
+  "name": "analytics",
+  "version": "0.0.1",
+  "dependencies": {
+    "@abp/ng.theme.shared": "^1.1.1",
+    "analytics.config": "^0.0.1"
+  }
+}

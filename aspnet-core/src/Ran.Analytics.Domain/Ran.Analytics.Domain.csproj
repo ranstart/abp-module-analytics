@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Ran.Analytics</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Ddd.Domain" Version="1.1.1" />
+    <ProjectReference Include="..\Ran.Analytics.Domain.Shared\Ran.Analytics.Domain.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

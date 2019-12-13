@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Ran.Analytics</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="1.1.1" />
+    <ProjectReference Include="..\Ran.Analytics.Application.Contracts\Ran.Analytics.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

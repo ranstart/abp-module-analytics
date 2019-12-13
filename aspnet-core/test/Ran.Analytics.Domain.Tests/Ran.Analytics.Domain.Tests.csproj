@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Ran.Analytics</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.3.0" />
+    <ProjectReference Include="..\Ran.Analytics.EntityFrameworkCore.Tests\Ran.Analytics.EntityFrameworkCore.Tests.csproj" />
+  </ItemGroup>
+
+</Project>

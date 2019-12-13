@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Ran.Analytics</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="1.1.1" />
+    <PackageReference Include="Volo.Abp.Ddd.Application" Version="1.1.1" />
+    <ProjectReference Include="..\Ran.Analytics.Application.Contracts\Ran.Analytics.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Ran.Analytics.Domain\Ran.Analytics.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

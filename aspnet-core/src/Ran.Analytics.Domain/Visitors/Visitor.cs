@@ -11,7 +11,7 @@ namespace Ran.Analytics.Visitors
     {
         protected Visitor() { }
 
-        public Visitor(Guid id, string clientIpAddress, Guid? userId, DateTime onTime, string referrer, string providerName, Guid providerKey)
+        public Visitor(Guid id, string clientIpAddress, Guid? userId, DateTime onTime, string referrer, string providerName, Guid providerKey,Guid? tenantId)
         {
             this.Id = id;
             this.ClientIpAddress = clientIpAddress;
@@ -20,6 +20,7 @@ namespace Ran.Analytics.Visitors
             this.Referrer = referrer;
             this.ProviderKey = providerKey;
             this.ProviderName = providerName;
+            this.TenantId = tenantId;
         }
 
         /// <summary>

@@ -29,7 +29,7 @@ namespace Ran.Analytics.Visitors
             var onTime = DateTime.Now;
             if (!await _visitorRepository.AnyAsync(clientIp, CurrentUser.Id, providerName, providerKey, onTime))
             {
-                var visitor = new Visitor(GuidGenerator.Create(), clientIp, CurrentUser.Id, onTime, referer, providerName, providerKey);
+                var visitor = new Visitor(GuidGenerator.Create(), clientIp, CurrentUser.Id, onTime, referer, providerName, providerKey,CurrentTenant.Id);
 
                 await _visitorRepository.InsertAsync(visitor);
                 return true;
